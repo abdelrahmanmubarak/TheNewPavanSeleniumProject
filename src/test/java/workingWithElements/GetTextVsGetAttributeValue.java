@@ -13,13 +13,14 @@ public class GetTextVsGetAttributeValue {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
+
         WebElement emailInputBox = driver.findElement(By.xpath("//input[@id='Email']"));
       /*  emailInputBox.clear();
         emailInputBox.sendKeys("admin123@gmail.com");*/
 
         //capturing text from input box
-       /* System.out.println("Attribute Value is " + emailInputBox.getAttribute("value"));
-        System.out.println("Attribute Value is " + emailInputBox.getText());*/
+        System.out.println("Attribute Value is " + emailInputBox.getAttribute("value"));
+        System.out.println("Attribute Value is " + emailInputBox.getText());
         //login button
        WebElement button = driver.findElement(By.xpath("//button[@type='submit']"));
         System.out.println(button.getAttribute("type"));

@@ -5,10 +5,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 public class AutoCompleteGooglePlacesDropDown {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+       // options.setExperimentalOption("debuggerAddress", "localhost:9222");
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.twoplugs.com/");
         driver.findElement(By.id("details-button")).click();
