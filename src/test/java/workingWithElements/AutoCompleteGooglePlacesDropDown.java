@@ -15,9 +15,9 @@ public class AutoCompleteGooglePlacesDropDown {
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.twoplugs.com/");
-        driver.findElement(By.id("details-button")).click();
-        driver.findElement(By.id("proceed-link")).click();
-        driver.findElement(By.xpath("//a[text()='Live Posting']"));
+       // driver.findElement(By.id("details-button")).click();
+       // driver.findElement(By.id("proceed-link")).click();
+        driver.findElement(By.xpath("//a[text()='Live Posting']")).click();
        WebElement searchBox = driver.findElement(By.id("autocomplete"));
                 searchBox.clear();
                 searchBox.sendKeys("Toronto");

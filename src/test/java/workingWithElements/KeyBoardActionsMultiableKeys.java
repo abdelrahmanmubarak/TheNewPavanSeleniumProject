@@ -18,24 +18,24 @@ public class KeyBoardActionsMultiableKeys {
         WebElement box2 = driver.findElement(By.id("inputText2"));
         box1.sendKeys("Welcome to Selenium");
         Actions act = new Actions(driver);
-        // ctrl + A
-        act.keyDown(Keys.CONTROL);
+        // cmd + A ==> Mac
+        act.keyDown(Keys.COMMAND);
         act.sendKeys("a");
-        act.keyUp(Keys.CONTROL);
+        act.keyUp(Keys.COMMAND);
         act.perform();
-        // ctrl + C
-        act.keyDown(Keys.CONTROL);
+        // cmd + C
+        act.keyDown(Keys.COMMAND);
         act.sendKeys("c");
-        act.keyUp(Keys.CONTROL);
+        act.keyUp(Keys.COMMAND);
         act.perform();
 
         // Tab Key - to shift to the second Box
         act.sendKeys(Keys.TAB);
         act.perform();
-        // ctrl + V
-        act.keyDown(Keys.CONTROL);
+        // cmd + V
+        act.keyDown(Keys.COMMAND);
         act.sendKeys("v");
-        act.keyUp(Keys.CONTROL);
+        act.keyUp(Keys.COMMAND);
         act.perform();
         // compare texts
         if (box1.getAttribute("value").equals(box2.getAttribute("value"))){

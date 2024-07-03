@@ -21,7 +21,7 @@ public class AutoSuggestDropDown_BingSearch {
         System.out.println("List of Elements " + list.size());
 
         for (WebElement listItem: list){
-            if (listItem.getText().contains("ide")){
+            if (listItem.getText().contains("ace")){
                 Thread.sleep(2000);
                 listItem.click();
                 break;
